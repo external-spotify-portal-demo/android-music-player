@@ -21,9 +21,5 @@
   },
   "engines": {
     "node": ">=16.0.0"
-  },
-  "ai_recommendation_engine": {
-    "enabled": true,
-    "version": "1.0.0"
   }
 }
