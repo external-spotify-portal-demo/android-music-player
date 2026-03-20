@@ -5,7 +5,7 @@ async function getRecommendationsForUser(userId) {
 }
 
 async function getRecommendationsByGenre(genre, limit) {
-  return aiReco.fetchAIRecommendations({ genre, limit });
+  return aiReco.fetchAIRecommendationsByGenre({ genre, limit });
 }
 
 module.exports = {

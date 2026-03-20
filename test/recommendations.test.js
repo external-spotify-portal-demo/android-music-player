@@ -7,6 +7,11 @@ jest.mock('spotify-ai-recommendation', () => ({
       { trackId: 'track_003', score: 0.87 },
     ]);
   }),
+  fetchAIRecommendationsByGenre: ({ genre, limit }) => {
+    return Promise.resolve([
+      { trackId: 'track_009', score: 0.91 },
+    ]);
+  },
 }));
 
 describe('AI Recommendation Engine', () => {

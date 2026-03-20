@@ -1,7 +1,7 @@
 {
   "name": "android-music-player",
   "version": "2.4.1",
-  "description": "Spotify's Android music player service with AI-powered recommendation engine",
+  "description": "Spotify's Android music player service with AI recommendation engine",
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
