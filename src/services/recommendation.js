@@ -1,20 +1,10 @@
-const legacyReco = require('music-player-recommendation-engine');
+const { SpotifyAIRecommendation } = require('spotify-ai-recommendation');
 
-function getRecommendationsForUser(userId, callback) {
-  legacyReco.getRecommendations(userId, (err, recs) => {
-    if (err) return callback(err);
-    callback(null, recs);
-  });
+const recommendationEngine = new SpotifyAIRecommendation();
+
+async function getRecommendationsForUser(userId) {
+  const recommendations = await recommendationEngine.getRecommendations(userId);
+  return recommendations;
 }
 
-function getRecommendationsByGenre(genre, limit, callback) {
-  legacyReco.getRecommendationsByGenre(genre, { limit }, (err, recs) => {
-    if (err) return callback(err);
-    callback(null, recs);
-  });
-}
-
-module.exports = {
-  getRecommendationsForUser,
-  getRecommendationsByGenre,
-};
+module.exports = { getRecommendationsForUser };
